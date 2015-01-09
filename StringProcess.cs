@@ -1,22 +1,12 @@
 using System;
 
-public class String
+public class StringProc
 {
 	public static void Main(string[] args){
-		string input = args[0];
+		string input = Console.ReadLine();
 
-		string result = interview(input);
+		string result = input.Replace("%20", " ");
 
 		Console.Write("{0}\n", result);
 	} 
-
-	public static string interview(string s)
-	{
-		while(s.IndexOf("%20") >= 0)
-		{
-			s = s.Replace("%20"," ");
-		}
-
-		return s;
-	}
 }
