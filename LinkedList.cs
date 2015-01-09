@@ -18,7 +18,7 @@ public class list
             node x = reverse(head);
             while (x != null)
             {
-                Console.Write("{0}", x.value);
+                Console.Write("{0} ", x.value);
                 x = x.next;
             }
         }
