@@ -1,5 +1,6 @@
 using System;
 
+
 public class Tree
 {
 	public Node root;
@@ -7,6 +8,9 @@ public class Tree
 	//CONSTRUCTOR
 	public Tree(Node newRoot)
 	{
+
+		Console.WriteLine("----BUILD TREE----\n Start at root:");
+		
 		root = newRoot;
 
 		Node current = root;
@@ -43,5 +47,7 @@ public class Tree
 
 			input = Console.ReadLine();
 		}
+
+		Console.WriteLine("----TREE BUILT----");
 	}
 }

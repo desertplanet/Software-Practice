@@ -1,6 +1,6 @@
 using System;
 
-public class BreadthFirst
+public class DepthFirst
 {
 	public static void Main()
 	{
@@ -8,22 +8,22 @@ public class BreadthFirst
 
 		Tree tree = new Tree(root);
 
-		Queue queue = new Queue();
+		Stack stack = new Stack();
 
-		queue.push(tree.root);
+		stack.push(tree.root);
 
 		Node N;
 
 		Console.WriteLine("Traversing...");
 
-		while (queue.size > 0)
+		while (stack.size > 0)
 		{
-			N = queue.pop();
+			N = stack.pop();
 
 			Console.WriteLine("{0}", N.value);
 
-			if (N.left != null) queue.push(N.left);
-			if (N.right != null) queue.push(N.right);
+			if (N.left != null) stack.push(N.left);
+			if (N.right != null) stack.push(N.right);
 		}
 	}
 }
